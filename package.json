@@ -1,0 +1,29 @@
+{
+  "name": "it-logger-backend",
+  "version": "1.0.0",
+  "description": "Backend For React IT-Logger Application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "NODE_ENV=development nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajaysharma12799/it-logger-backend.git"
+  },
+  "author": "Ajay Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajaysharma12799/it-logger-backend/issues"
+  },
+  "homepage": "https://github.com/ajaysharma12799/it-logger-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.6"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.12"
+  }
+}
