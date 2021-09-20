@@ -10,9 +10,9 @@ const LogSchema = new mongoose.Schema({
         default: false,
         required: true
     },
-    technician: {
-        type: String,
-        required: true
+    technician:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
     }
 }, {timestamps: true});
 
