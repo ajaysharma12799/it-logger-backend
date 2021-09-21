@@ -5,7 +5,7 @@ const LogSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    fixed: {
+    attention: {
         type: Boolean,
         default: false,
         required: true

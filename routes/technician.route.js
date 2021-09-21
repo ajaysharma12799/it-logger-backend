@@ -2,6 +2,16 @@ const express = require("express");
 const router = express.Router();
 const User = require("../model/technician.model");
 
+router.get("/getTechnician/:id", async (req, res) => {
+    try {
+        const technician = await User.findById(req.params.id);
+        res.json(technician);
+    } catch (error) {
+        console.error(error);
+        res.json({message: "Server Error"});
+    }
+});
+
 router.post("/addTechnician", async (req, res) => {
     try {
         const {firstName, lastName, email} = req.body;

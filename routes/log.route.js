@@ -4,8 +4,8 @@ const Logs = require("../model/log.model");
 
 router.post("/addLog", async (req, res) => {
     try {
-        const {message, fixed, technician} = req.body;
-        let newLog = new Logs({message, fixed, technician});
+        const {message, attention, technician} = req.body;
+        let newLog = new Logs({message, attention, technician});
         await newLog.save();
         res.json({message: "Log Added Successfully"});
     } catch (error) {
@@ -27,9 +27,9 @@ router.get("/allLogs", async (req, res) => {
 router.put("/updateLog/:id", async (req, res) => {
     try {
         const log = await Logs.findById(req.params.id);
-        const {message, fixed, technician} = req.body;
+        const {message, attention, technician} = req.body;
         log.message = message;
-        log.fixed = fixed;
+        log.attention = attention;
         log.technician = technician;
         await log.save();
         res.json({message: "Log Updated Successfully"});  
